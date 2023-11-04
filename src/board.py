@@ -7,7 +7,8 @@ class board:
         self.squares =[[0, 0, 0, 0, 0, 0, 0, 0]for col in range(COLS)]
 
         self._create()
-
+        self._add_pieces('white')
+        self._add_pieces('black')
     def _create(self):
         for row in range(ROWS):
             for col in range(COLS):
@@ -24,3 +25,18 @@ class board:
         # knights
         self.squares[row_other][1]= Square(row_other, 1, Knight(color))
         self.squares[row_other][6]= Square(row_other, 6, Knight(color))
+
+        # bishops
+        self.squares[row_other][2]= Square(row_other, 2, Bishop(color))
+        self.squares[row_other][5]= Square(row_other, 5, Bishop(color))
+        
+        # rooks
+        self.squares[row_other][0]= Square(row_other, 0, Rook(color))
+        self.squares[row_other][7]= Square(row_other, 7, Rook(color))
+
+        # queen
+        self.squares[row_other][3]= Square(row_other, 3, Queen(color))
+        
+        # king
+        self.squares[row_other][4]= Square(row_other, 4, King(color))
+       
