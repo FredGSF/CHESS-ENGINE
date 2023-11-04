@@ -1,3 +1,4 @@
+import os
 
 class Piece:
 
@@ -7,11 +8,17 @@ class Piece:
 
         value_sign = 1 if color == 'white' else -1
         self.value = value * value_sign
+        self.moves = []
+        self.moved = False
         self.set_texture()
         self.texture_rect = texture_rect
 
-    def set_texture(self):
-        pass
+    def set_texture(self, size=80):
+        self.texture = os.path.join(
+            f'assets/images/imgs-{size}px/{self.name}.png')
+        
+    def add_texture(self, move):
+        self.moves.append(move)
 
 class Pawn(Piece):
 
