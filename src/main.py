@@ -17,12 +17,29 @@ class Main:
 
         screen = self.screen
         game = self.game
+        dragger = self.game.drager
         
         while True:
             game.show_bg(screen)
             game.show_pieces(screen)
 
             for event in pygame.event.get():
+                #click
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    dragger.update_mouse(event.pos)
+                    
+                    clicked_row = dragger.mouseY // SQSIZE
+                    clicked_col = dragger.mouseX // SQSIZE
+
+                #mouse motion
+                elif event.type == pygame.MOUSEMOTION:
+                    pass
+
+                #click release
+                elif event.type == pygame.MOUSEBUTTONUP:
+                    pass
+                    
+                #quit application
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
