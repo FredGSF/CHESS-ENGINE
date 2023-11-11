@@ -7,8 +7,13 @@ class Dragger:
     def __init__(self):
         self.mouseX = 0
         self.mouseY = 0
+        self.initial_row = 0
+        self.initial_col = 0
 
     def update_mouse(self, pos):
         self.mouseX, self.mouseY = pos #(xcor, ycor)
         
+    def save_initial(self, pos):
+        self.initial_row = pos[1] // SQSIZE
+        self.initial_col = pos[0] // SQSIZE
 
