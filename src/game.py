@@ -6,7 +6,7 @@ from dragger import Dragger
 from config import Config
 from square import Square
 
- 
+
 class Game:
 
     def __init__(self):
