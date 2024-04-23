@@ -6,7 +6,7 @@ from game import Game
 from square import Square
 from move import Move
   
-
+ 
 class Main: 
 
     def __init__(self):
