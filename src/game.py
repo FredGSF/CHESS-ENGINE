@@ -7,7 +7,7 @@ from config import Config
 from square import Square
 
 
-class Game:
+class Game: 
 
     def __init__(self):
         self.next_player = "white"
