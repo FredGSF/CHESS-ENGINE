@@ -4,7 +4,7 @@ class Move:
         # initial and final are squares
         self.initial = initial
         self.final = final 
-
+ 
     def __str__(self):
         s = ""
         s += f"({self.initial.col}, {self.initial.row})"
