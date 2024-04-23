@@ -6,7 +6,7 @@ from theme import Theme
 
 
 class Config: 
-
+ 
     def __init__(self):
         self.themes = []
         self._add_themes()
