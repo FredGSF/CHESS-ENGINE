@@ -5,7 +5,7 @@ from move import Move
 from sound import Sound
 import copy
 import os
- 
+
 
 class Board:
 
