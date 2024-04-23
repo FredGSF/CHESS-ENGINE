@@ -4,3 +4,4 @@ class Color:
         self.light = light
         self.dark = dark 
  
+ 
