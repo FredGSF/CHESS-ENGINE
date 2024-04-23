@@ -8,7 +8,7 @@ from square import Square
 
 
 class Game:  
-  
+   
     def __init__(self):
         self.next_player = "white"
         self.hovered_sqr = None
