@@ -3,7 +3,7 @@ import pygame
 from const import *
 
 
-class Dragger:
+class Dragger: 
 
     def __init__(self):
         self.piece = None
