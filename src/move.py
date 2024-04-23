@@ -5,7 +5,7 @@ class Move:
         self.initial = initial
         self.final = final 
  
-    def __str__(self):
+    def __str__(self): 
         s = ""
         s += f"({self.initial.col}, {self.initial.row})"
         s += f" -> ({self.final.col}, {self.final.row})"
